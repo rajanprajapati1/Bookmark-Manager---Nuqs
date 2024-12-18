@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin:0;
+  padding: 0 ;
+  font-family: "Poppins", serif;
+}
+
+
+@layer base {
+  :root {
+    --radius:0.5rem
+  }
+}
+
+.icon-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.icon-search {
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  max-height: 120px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+ 
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: slateblue; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+  transition: background-color 0.3s;
+}
+
+.icon-item:hover {
+  background-color: #f0f0f0;
+}
+
+.selected-icon {
+  margin-top: 10px;
+  font-size: 14px;
+}
